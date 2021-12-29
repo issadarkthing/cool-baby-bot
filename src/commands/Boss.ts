@@ -66,12 +66,15 @@ export default class extends Command {
       return;
     }
 
+    const prefix = this.commandManager.prefix;
     const bossList = toNList(boss.map(x => x.name));
+    const description = bossList + "\n---\n" + 
+      `To select boss 1 use command \`${prefix}${this.name} 1\``;
 
     const embed = new MessageEmbed()
       .setColor("RED")
       .setTitle("Boss")
-      .setDescription(bossList)
+      .setDescription(description)
 
     msg.channel.send({ embeds: [embed] });
   }
