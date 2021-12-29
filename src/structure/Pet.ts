@@ -9,8 +9,14 @@ export abstract class Pet extends BasePet {
     return [
       new Blob(),
       new Slime(),
+      new Eagle(),
       new Phoenix(),
       new Titanoboa(),
+      new BabyDragon(),
+      new Lochness(),
+      new Dog(),
+      new BeardedDragon(),
+      new Ghost(),
     ];
   }
 
@@ -51,6 +57,14 @@ export class Slime extends Pet {
   price = 15000;
 }
 
+export class Eagle extends Pet {
+  name = "Eagle";
+  id = "eagle";
+  attack = 18;
+  interceptRate = 0.22;
+  price = 17000;
+}
+
 export class Phoenix extends Pet {
   name = "Phoenix";
   id = "phoenix";
@@ -67,20 +81,20 @@ export class Titanoboa extends Pet {
   price = 30000;
 }
 
-export class BeardedDragon extends Pet {
-  name = "Bearded Dragon";
-  id = "bearded-dragon";
-  attack = 60;
-  interceptRate = 0.1;
-  price = 70000;
-}
-
 export class BabyDragon extends Pet {
   name = "Baby Dragon";
   id = "baby-dragon";
   attack = 20;
   interceptRate = 0.2;
   price = 55000;
+}
+
+export class Lochness extends Pet {
+  name = "Lochness";
+  id = "lochness";
+  attack = 22;
+  interceptRate = 0.3;
+  price = 58000;
 }
 
 export class Dog extends Pet {
@@ -91,3 +105,18 @@ export class Dog extends Pet {
   price = 60000;
 }
 
+export class BeardedDragon extends Pet {
+  name = "Bearded Dragon";
+  id = "bearded-dragon";
+  attack = 60;
+  interceptRate = 0.1;
+  price = 70000;
+}
+
+export class Ghost extends Pet {
+  name = "Ghost";
+  id = "ghost";
+  attack = 28;
+  interceptRate = 0.25;
+  price = 90000;
+}
