@@ -11,6 +11,12 @@ export abstract class Armor extends BaseArmor {
       new ChestPlate(),
       new Leggings(),
       new Boots(),
+      new Plate(),
+      new MetalHelmet(),
+      new MetalChestPlate(),
+      new MetalLeggings(),
+      new MetalBoots(),
+      new MetalPlate(),
     ];
   }
 
@@ -66,4 +72,46 @@ export class Boots extends Armor {
   name = "Boots";
   price = 5500;
   armor = 0.011
+}
+
+export class Plate extends Armor {
+  id = "plate";
+  name = "Plate";
+  price = 5800;
+  armor = 0.012;
+}
+
+export class MetalHelmet extends Armor {
+  id = "metal_helmet";
+  name = "Metal Helmet";
+  price = 20000;
+  armor = 0.015
+}
+
+export class MetalChestPlate extends Armor {
+  id = "metal_chest_plate";
+  name = "Metal Chest Plate";
+  price = 23000;
+  armor = 0.017;
+}
+
+export class MetalLeggings extends Armor {
+  id = "metal_leggings";
+  name = "Metal Leggings";
+  price = 30000;
+  armor = 0.018
+}
+
+export class MetalBoots extends Armor {
+  id = "metal_boots";
+  name = "Metal Boots";
+  price = 33000;
+  armor = 0.021
+}
+
+export class MetalPlate extends Armor {
+  id = "metal_plate";
+  name = "Metal Plate";
+  price = 35200;
+  armor = 0.022;
 }
