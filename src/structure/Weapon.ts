@@ -11,6 +11,12 @@ export abstract class Weapon extends BaseWeapon {
       new Sword(),
       new Dagger(),
       new Mace(),
+      new Bow(),
+      new DoubleAxe(),
+      new GiantSword(),
+      new IronDagger(),
+      new HeavyMace(),
+      new FiringBow(),
     ];
   }
 
@@ -68,9 +74,45 @@ class Mace extends Weapon {
   price = 3500;
 }
 
-class Blaster extends Weapon {
-  id = "blaster";
-  name = "Blaster";
+class Bow extends Weapon {
+  id = "bow";
+  name = "Bow and Arrow";
   attack = 50;
   price = 4000;
+}
+
+
+class DoubleAxe extends Weapon {
+  id = "double_axe";
+  name = "Double Axe";
+  attack = 75;
+  price = 8000;
+}
+
+class GiantSword extends Weapon {
+  id = "giant_sword";
+  name = "Giant Sword";
+  attack = 85;
+  price = 9500;
+}
+
+class IronDagger extends Weapon {
+  id = "iron_dagger";
+  name = "Iron Dagger";
+  attack = 98;
+  price = 11000;
+}
+
+class HeavyMace extends Weapon {
+  id = "heavy_mace";
+  name = "Heavy Mace";
+  attack = 120;
+  price = 15000;
+}
+
+class FiringBow extends Weapon {
+  id = "firing_bow";
+  name = "Firing Bow and Arrow";
+  attack = 140;
+  price = 16000;
 }
