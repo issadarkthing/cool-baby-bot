@@ -17,6 +17,11 @@ export abstract class Pet extends BasePet {
       new Dog(),
       new BeardedDragon(),
       new Ghost(),
+      new BabyDragon1(),
+      new Lochness1(),
+      new Dog1(),
+      new BeardedDragon1(),
+      new Ghost1(),
     ];
   }
 
@@ -119,4 +124,45 @@ export class Ghost extends Pet {
   attack = 28;
   interceptRate = 0.25;
   price = 90000;
+}
+
+
+export class BabyDragon1 extends Pet {
+  name = "Centaur";
+  id = "centaur";
+  attack = 30;
+  interceptRate = 0.2;
+  price = 100000;
+}
+
+export class Lochness1 extends Pet {
+  name = "Pegasus";
+  id = "pegasus";
+  attack = 32;
+  interceptRate = 0.25;
+  price = 150000;
+}
+
+export class Dog1 extends Pet {
+  name = "Cerberus";
+  id = "cerberus";
+  attack = 34;
+  interceptRate = 0.31;
+  price = 205000;
+}
+
+export class BeardedDragon1 extends Pet {
+  name = "Werewolf";
+  id = "werewolf";
+  attack = 50;
+  interceptRate = 0.35;
+  price = 255000;
+}
+
+export class Ghost1 extends Pet {
+  name = "Dragon";
+  id = "dragon";
+  attack = 120;
+  interceptRate = 0.1;
+  price = 300000;
 }
