@@ -17,6 +17,11 @@ export abstract class Armor extends BaseArmor {
       new MetalLeggings(),
       new MetalBoots(),
       new MetalPlate(),
+      new ChestPiece(),
+      new HeroOfFools(),
+      new GuardOfBloodshed(),
+      new Cuirass(),
+      new Suit(),
     ];
   }
 
@@ -48,70 +53,105 @@ export abstract class Armor extends BaseArmor {
 
 export class Helmet extends Armor {
   id = "helmet";
-  name = "Helmet";
+  name = "Rusty Helmet";
   price = 8500;
   armor = 0.005
 }
 
 export class ChestPlate extends Armor {
   id = "chest_plate";
-  name = "Chest Plate";
+  name = "Wool Breastplate";
   price = 5000;
   armor = 0.006
 }
 
 export class Leggings extends Armor {
   id = "leggings";
-  name = "Leggings";
+  name = "Hide Vest";
   price = 4500;
   armor = 0.008
 }
 
 export class Boots extends Armor {
   id = "boots";
-  name = "Boots";
+  name = "Heavy Leather Vest";
   price = 5500;
   armor = 0.011
 }
 
 export class Plate extends Armor {
   id = "plate";
-  name = "Plate";
+  name = "Guardian of Infinity";
   price = 5800;
   armor = 0.012;
 }
 
 export class MetalHelmet extends Armor {
   id = "metal_helmet";
-  name = "Metal Helmet";
+  name = "Blessing of Broken Bones";
   price = 20000;
   armor = 0.015
 }
 
 export class MetalChestPlate extends Armor {
   id = "metal_chest_plate";
-  name = "Metal Chest Plate";
+  name = "Pact of the Lion";
   price = 23000;
   armor = 0.017;
 }
 
 export class MetalLeggings extends Armor {
   id = "metal_leggings";
-  name = "Metal Leggings";
+  name = "Vengeful Golden Armor";
   price = 30000;
   armor = 0.018
 }
 
 export class MetalBoots extends Armor {
   id = "metal_boots";
-  name = "Metal Boots";
+  name = "Terror of Ashes";
   price = 33000;
   armor = 0.021
 }
 
 export class MetalPlate extends Armor {
   id = "metal_plate";
-  name = "Metal Plate";
+  name = "Soul Golden Greatplate";
   price = 35200;
   armor = 0.022;
+}
+
+export class ChestPiece extends Armor {
+  id = "demon_chestpiece";
+  name = "Demon Chestpiece";
+  price = 45100;
+  armor = 0.025;
+}
+
+export class HeroOfFools extends Armor {
+  id = "hero_of_fools";
+  name = "Hero of Fools";
+  price = 48200;
+  armor = 0.028;
+}
+
+export class GuardOfBloodshed extends Armor {
+  id = "guard_of_bloodshed";
+  name = "Guard of Bloodshed";
+  price = 51000;
+  armor = 0.030;
+}
+
+export class Cuirass extends Armor {
+  id = "cuirass_of_desecration";
+  name = "Cuirass of Desecration";
+  price = 56000;
+  armor = 0.032;
+}
+
+export class Suit extends Armor {
+  id = "black_iron_suit";
+  name = "Black Iron Suit";
+  price = 60500;
+  armor = 0.038;
 }
