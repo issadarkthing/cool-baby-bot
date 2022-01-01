@@ -27,7 +27,7 @@ export default class extends Command {
     const [arg1] = args;
     const embed = new MessageEmbed()
       .setColor("RANDOM")
-      .setTitle("Leaderboard");
+      .setTitle(`${this.emoji} Leaderboard ${this.emoji}`);
 
     let description = "";
 
@@ -49,6 +49,7 @@ export default class extends Command {
       );
 
       description += bold(`Name | Win/Hunt %\n`) + player;
+      embed.setTitle(`🏹 Hunter Leaderboard`);
 
     } else if (arg1 === "level") {
 
@@ -58,6 +59,7 @@ export default class extends Command {
       );
 
       description += bold(`Name | Level\n`) + player;
+      embed.setTitle(`💜 Level Leaderboard`);
 
     } else {
 
@@ -67,6 +69,7 @@ export default class extends Command {
       );
 
       description += bold(`Name | ${currency}\n`) + player;
+      embed.setTitle(`⚖️ Coin Leaderboard`);
     }
 
     const prefix = this.commandManager.prefix;
