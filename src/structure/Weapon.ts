@@ -17,6 +17,11 @@ export abstract class Weapon extends BaseWeapon {
       new IronDagger(),
       new HeavyMace(),
       new FiringBow(),
+      new DoubleAxe1(),
+      new GiantSword1(),
+      new IronDagger1(),
+      new HeavyMace1(),
+      new FiringBow1(),
     ];
   }
 
@@ -48,35 +53,35 @@ export abstract class Weapon extends BaseWeapon {
 
 class Axe extends Weapon {
   id = "axe";
-  name = "Axe";
+  name = "Axe - Old Rusty Axe";
   attack = 20;
   price = 1000;
 }
 
 class Sword extends Weapon {
   id = "sword";
-  name = "Sword";
+  name = "Dagger - Bloodsurge";
   attack = 30;
   price = 2000;
 }
 
 class Dagger extends Weapon {
   id = "dagger";
-  name = "Dagger";
+  name = "Sword - Piece Maker";
   attack = 40;
   price = 3000;
 }
 
 class Mace extends Weapon {
   id = "mace";
-  name = "Mace";
+  name = "Bow - Skeletal Crossfire";
   attack = 45;
   price = 3500;
 }
 
 class Bow extends Weapon {
   id = "bow";
-  name = "Bow and Arrow";
+  name = "Warhammer - Knight's Fall";
   attack = 50;
   price = 4000;
 }
@@ -84,35 +89,70 @@ class Bow extends Weapon {
 
 class DoubleAxe extends Weapon {
   id = "double_axe";
-  name = "Double Axe";
+  name = "Double Axe - Thunder Crescent";
   attack = 75;
   price = 8000;
 }
 
 class GiantSword extends Weapon {
   id = "giant_sword";
-  name = "Giant Sword";
+  name = "Mace - Brutal Reaver";
   attack = 85;
   price = 9500;
 }
 
 class IronDagger extends Weapon {
   id = "iron_dagger";
-  name = "Iron Dagger";
+  name = "Battle Axe - Blind Justice";
   attack = 98;
   price = 11000;
 }
 
 class HeavyMace extends Weapon {
   id = "heavy_mace";
-  name = "Heavy Mace";
+  name = "Bow - Tiebreaker";
   attack = 120;
   price = 15000;
 }
 
 class FiringBow extends Weapon {
   id = "firing_bow";
-  name = "Firing Bow and Arrow";
+  name = "Giant Sword - Destiny's Song";
   attack = 140;
   price = 16000;
+}
+
+class DoubleAxe1 extends Weapon {
+  id = "sword-stormcaller";
+  name = "Sword - Stormcaller";
+  attack = 160;
+  price = 18500;
+}
+
+class GiantSword1 extends Weapon {
+  id = "heavy_mace-knights_honor";
+  name = "Heavy Mace - Knight's Honor";
+  attack = 190;
+  price = 21000;
+}
+
+class IronDagger1 extends Weapon {
+  id = "bow-hopes_end";
+  name = "Bow - Hope's End";
+  attack = 220;
+  price = 23500;
+}
+
+class HeavyMace1 extends Weapon {
+  id = "warhammer-protectors_pummeler";
+  name = "Warhammer - Protector's Pummeler";
+  attack = 250;
+  price = 26510;
+}
+
+class FiringBow1 extends Weapon {
+  id = "sword-faithkeeper";
+  name = "Sword - Faithkeeper";
+  attack = 280;
+  price = 28700;
 }
