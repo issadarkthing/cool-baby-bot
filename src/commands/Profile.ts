@@ -11,7 +11,10 @@ export default class extends Command {
   async exec(msg: Message) {
 
     const player = Player.fromUser(msg.author);
+    const embed = player.show();
 
-    msg.channel.send({ embeds: [player.show()] });
+    embed.setTitle("🎭Profile🎭 ");
+
+    msg.channel.send({ embeds: [embed] });
   }
 }

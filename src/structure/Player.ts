@@ -1,4 +1,4 @@
-import { User } from "discord.js";
+import { MessageEmbed, User } from "discord.js";
 import { client } from "../index";
 import { Player as PlayerRPG } from "discordjs-rpg";
 import { code, currency } from "../utils";
@@ -108,26 +108,42 @@ export class Player extends PlayerRPG {
     }
   }
 
+  private setNewName(embed: MessageEmbed, name: string, newName: string) {
+    const field = embed.fields.find(x => x.name === name);
+
+    if (field) {
+      field.name = newName;
+    }
+  }
+
   show() {
     const profile = super.show();
 
+    this.setNewName(profile, "Attack", "💥 Attack");
+    this.setNewName(profile, "HP", "❤️ HP");
+    this.setNewName(profile, "Armor", "🛡️  Armor");
+    this.setNewName(profile, "Crit Chance", "🔥 Crit Chance");
+    this.setNewName(profile, "Crit Damage", "🔥 Crit Damage");
+    this.setNewName(profile, "Pet", "🐉 Pet");
+    this.setNewName(profile, "Weapons", "🔪 Weapons");
+
     const armorIndex = 8;
     const armor = profile.fields.at(armorIndex)!.value;
-    profile.fields.at(armorIndex)!.name = currency;
+    profile.fields.at(armorIndex)!.name = "⚖️ " + currency;
     profile.fields.at(armorIndex)!.value = this.coins.toString();
     profile.fields.at(armorIndex)!.inline = true;
 
-    profile.addField("Win", code(this.win), true);
-    profile.addField("Hunt", code(this.hunt), true);
+    profile.addField("🎖️ Win", code(this.win), true);
+    profile.addField("🏹 Hunt", code(this.hunt), true);
 
     const winHuntPercent = (this.win / this.hunt) || 0;
     const winHuntStr = (winHuntPercent * 100).toFixed(2) + "%";
-    profile.addField("Win/Hunt %", code(winHuntStr), true);
+    profile.addField("🏹 Win/Hunt %", code(winHuntStr), true);
 
-    profile.addField("Level", code(this.level), true);
-    profile.addField("xp", `\`${this.xp}/${this.requiredXP()}\``, true);
+    profile.addField("💜 Level", code(this.level), true);
+    profile.addField("🔱 xp", `\`${this.xp}/${this.requiredXP()}\``, true);
 
-    profile.addField("Armor", armor);
+    profile.addField("🛡️ Armor", armor);
 
     return profile;
   }
