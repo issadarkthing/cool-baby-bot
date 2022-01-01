@@ -74,7 +74,7 @@ export default class extends Command {
 
     const embed = new MessageEmbed()
       .setColor("RED")
-      .setTitle("Boss")
+      .setTitle(`${this.emoji} Boss ${this.emoji}`)
       .setDescription(description)
 
     msg.channel.send({ embeds: [embed] });
