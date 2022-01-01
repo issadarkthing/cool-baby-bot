@@ -8,7 +8,7 @@ import {
   BLUE_BUTTON,
 } from "../utils";
 import { Armor } from "../structure/Armor";
-import { Command } from "@jiman24/commandment";
+import { Command } from "../structure/Command";
 import { ButtonHandler } from "../structure/ButtonHandler";
 import { stripIndents } from "common-tags";
 import { Item } from "../structure/Item";
@@ -24,6 +24,7 @@ interface ItemLike {
 export default class extends Command {
   name = "shop";
   description = "buy in-game items";
+  emoji = "📜";
 
   private toList(items: ItemLike[], start = 1) {
     const list = toNList(

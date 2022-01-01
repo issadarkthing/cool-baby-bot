@@ -6,6 +6,7 @@ import { ButtonConfirmation } from "../structure/ButtonHandler";
 export default class extends Command {
   name = "reset";
   permissions: PermissionResolvable[] = ["ADMINISTRATOR"];
+  disable = true;
   
   async exec(msg: Message, args: string[]) {
 

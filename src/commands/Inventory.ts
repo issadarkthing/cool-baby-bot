@@ -1,4 +1,4 @@
-import { Command } from "@jiman24/commandment";
+import { Command } from "../structure/Command";
 import { Message, MessageEmbed } from "discord.js";
 import { Armor } from "../structure/Armor";
 import { Weapon } from "../structure/Weapon";
@@ -15,6 +15,7 @@ export default class extends Command {
   aliases = ["i", "inv"];
   maxArmor = 4; // max equipped armor
   maxWeapon = 2; // max equipped weapon
+  emoji = "🕯️";
 
   async exec(msg: Message, args: string[]) {
 

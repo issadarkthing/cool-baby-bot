@@ -1,4 +1,4 @@
-import { Command } from "@jiman24/commandment";
+import { Command } from "../structure/Command";
 import { Message } from "discord.js";
 import { client } from "../index";
 import { bold } from "../utils";
@@ -7,6 +7,7 @@ import { Player } from "../structure/Player";
 export default class extends Command {
   name = "create";
   description = "create new character";
+  emoji = "✅";
 
   async exec(msg: Message) {
 

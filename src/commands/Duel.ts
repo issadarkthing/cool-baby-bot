@@ -1,4 +1,4 @@
-import { Command } from "@jiman24/commandment";
+import { Command } from "../structure/Command";
 import { Message } from "discord.js";
 import { Player } from "../structure/Player";
 import { bold, currency, validateAmount, validateNumber } from "../utils";
@@ -11,6 +11,7 @@ export default class extends Command {
   description = "duel with other person with bet";
   maxCount = 5;
   cooldownTime = 1; // hours
+  emoji = "☠️";
 
   async exec(msg: Message, args: string[]) {
 

@@ -1,4 +1,4 @@
-import { Command } from "@jiman24/commandment";
+import { Command } from "../structure/Command";
 import { Message, MessageEmbed } from "discord.js";
 import { Player } from "../structure/Player";
 import { Battle } from "discordjs-rpg";
@@ -33,6 +33,7 @@ export default class extends Command {
   name = "hunt";
   description = "start hunting";
   block = true;
+  emoji = "🏹";
 
   async exec(msg: Message) {
 

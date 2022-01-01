@@ -1,14 +1,14 @@
-import { Command } from "@jiman24/commandment";
+import { Command } from "../structure/Command";
 import { Message, MessageEmbed } from "discord.js";
 import { client } from "../index";
 import { bold, currency } from "../utils";
 import { Player } from "../structure/Player";
-import { stripIndents } from "common-tags";
 
 export default class extends Command {
   name = "leaderboard";
   aliases = ["l"];
   description = "show leaderboard";
+  emoji = "⚖️";
 
   private getList<T>(
     sortFn: (a: T, b: T) => number, 
