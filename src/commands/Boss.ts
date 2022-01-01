@@ -39,6 +39,7 @@ export default class extends Command {
       menu.addButton(CROSSED_SWORD, "battle", async () => {
 
         const battle = new Battle(msg, random.shuffle([player, selectedBoss]));
+        battle.setPlayerDeadText(x => `${x.name} has lost a battle`);
 
         const winner = await battle.run();
 

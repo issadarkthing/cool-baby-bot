@@ -6,7 +6,7 @@ specifiers:
   '@types/luxon': ^2.0.8
   common-tags: ^1.8.2
   discord.js: ^13.3.1
-  discordjs-rpg: ^2.3.2
+  discordjs-rpg: ^2.3.6
   dotenv: ^10.0.0
   enmap: ^5.8.7
   luxon: ^2.2.0
@@ -17,7 +17,7 @@ dependencies:
   '@jiman24/commandment': 0.4.0
   common-tags: 1.8.2
   discord.js: 13.4.0
-  discordjs-rpg: 2.3.4
+  discordjs-rpg: 2.3.6
   dotenv: 10.0.0
   enmap: 5.8.7
   luxon: 2.2.0
@@ -326,8 +326,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /discordjs-rpg/2.3.4:
-    resolution: {integrity: sha512-UTS5H/8vwZMDAhJZ1oadeuG+l034RiwyXmM9PJeawP3TG4JAEESQY+BJPxG3AapJ544m62/1ciuBJAkVxoOnNQ==}
+  /discordjs-rpg/2.3.6:
+    resolution: {integrity: sha512-mMdaMmP6fFhUpDTZm+PNAfvxwZX/yxeTmeTG7b5bkqFJJgy2DYGws9xFt4tiFOTEG3UIF7ljZHEjoVdm30YtXA==}
     dependencies:
       common-tags: 1.8.2
       discord.js: 13.4.0

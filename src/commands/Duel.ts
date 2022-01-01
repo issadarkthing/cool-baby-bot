@@ -56,6 +56,8 @@ export default class extends Command {
     player.coins -= amount;
 
     const battle = new Battle(msg, random.shuffle([player, opponent]));
+
+    battle.setPlayerDeadText(x => `${x.name} has lost a battle`);
     battle.interval = 3000;
 
     const winner = (await battle.run()) as Player;

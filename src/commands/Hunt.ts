@@ -43,7 +43,9 @@ export default class extends Command {
     await search.search(async monster => {
 
       const battle = new Battle(msg, random.shuffle([player, monster]));
+      battle.setPlayerDeadText(x => `${x.name} has lost a battle`);
       battle.interval = 2000;
+
       const winner = await battle.run();
       player.hunt++;
 
