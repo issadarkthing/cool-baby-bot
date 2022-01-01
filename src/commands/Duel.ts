@@ -1,7 +1,7 @@
 import { Command } from "../structure/Command";
 import { Message } from "discord.js";
 import { Player } from "../structure/Player";
-import { bold, currency, validateAmount, validateNumber } from "../utils";
+import { bold, currency, random, validateAmount, validateNumber } from "../utils";
 import { Battle } from "discordjs-rpg";
 import { ButtonConfirmation } from "../structure/ButtonHandler";
 import { oneLine } from "common-tags";
@@ -55,7 +55,7 @@ export default class extends Command {
     opponent.coins -= amount;
     player.coins -= amount;
 
-    const battle = new Battle(msg, [player, opponent]);
+    const battle = new Battle(msg, random.shuffle([player, opponent]));
     const winner = (await battle.run()) as Player;
     const loser = player.id === winner.id ? opponent : player;
 
