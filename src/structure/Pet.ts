@@ -75,7 +75,7 @@ export class Phoenix extends Pet {
   id = "phoenix";
   attack = 15;
   interceptRate = 0.2;
-  price = 15000;
+  price = 20000;
 }
 
 export class Titanoboa extends Pet {
