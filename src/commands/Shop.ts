@@ -6,6 +6,7 @@ import {
   validateIndex, 
   validateNumber, 
   BLUE_BUTTON,
+  cap,
 } from "../utils";
 import { Armor } from "../structure/Armor";
 import { Command } from "../structure/Command";
@@ -44,12 +45,25 @@ export default class extends Command {
     if (arg1) {
     
       let items = [] as Item[] | null;
+      let emoji = "";
 
       switch (arg1) {
-        case "armor": items = Armor.all; break;
-        case "weapon": items = Weapon.all; break;
-        case "pet": items = Pet.all; break;
-        case "skill": items = Skill.all; break;
+        case "armor": 
+          items = Armor.all; 
+          emoji = "🛡️";
+          break;
+        case "weapon": 
+          items = Weapon.all; 
+          emoji = "🔪";
+          break;
+        case "pet": 
+          items = Pet.all; 
+          emoji = "🐉";
+          break;
+        case "skill": 
+          items = Skill.all; 
+          emoji = "💫";
+          break;
         default: items = null;
       }
 
@@ -88,7 +102,7 @@ export default class extends Command {
 
         const embed = new MessageEmbed()
           .setColor("RANDOM")
-          .setTitle(`${category} Shop`)
+          .setTitle(`${emoji} ${cap(category)} Shop ${emoji}`)
           .setDescription(itemList)
 
         msg.channel.send({ embeds: [embed] });
@@ -99,17 +113,17 @@ export default class extends Command {
 
     const rpgList = stripIndents`
       **Categories**
-      armor
-      weapon
-      pet
-      skill
+      🛡️ Armor
+      🔪 Weapon
+      🐉 Pet
+      💫 Skill
       ------
       To open armor shop use command \`${prefix}${this.name} armor\`
       `;
 
       const shop = new MessageEmbed()
       .setColor("RANDOM")
-      .setTitle("Shop")
+      .setTitle(`${this.emoji} Shop`)
       .setDescription(rpgList);
 
     msg.channel.send({ embeds: [shop] });

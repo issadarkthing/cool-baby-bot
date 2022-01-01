@@ -17,6 +17,11 @@ export const REPEAT = "🔁";
 export const DIAMOND = "🔹";
 export const CROSSED_SWORD = "⚔️";
 
+/** capitalize string */
+export function cap(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 export function bold(str: string | number) {
   return `**${str}**`;
 }
