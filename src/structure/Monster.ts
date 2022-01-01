@@ -3,6 +3,7 @@ import { code, currency, random } from "../utils";
 import { Player } from "./Player";
 import { Skill } from "./Skill";
 import { Pet } from "./Pet";
+import { MessageEmbed } from "discord.js";
 
 export class Monster extends Fighter {
   drop = random.integer(150, 500);
@@ -33,11 +34,30 @@ export class Monster extends Fighter {
     return random.integer(-3, this.difficulty);
   }
 
+  private setNewName(embed: MessageEmbed, name: string, newName: string) {
+    const field = embed.fields.find(x => x.name === name);
+
+    if (field) {
+      field.name = newName;
+    }
+  }
+
   show() {
     const profile = super.show();
 
-    profile.addField(`${currency} Drop`, code(this.drop), true);
-    profile.addField("xp Drop", code(this.xpDrop), true);
+    this.setNewName(profile, "Attack", "💥 Attack");
+    this.setNewName(profile, "HP", "❤️ HP");
+    this.setNewName(profile, "Armor", "🛡️  Armor");
+    this.setNewName(profile, "Crit Chance", "🔥 Crit Chance");
+    this.setNewName(profile, "Crit Damage", "🔥 Crit Damage");
+    this.setNewName(profile, "Pet", "🐉 Pet");
+    this.setNewName(profile, "Weapons", "🔪 Weapons");
+    this.setNewName(profile, "Skill", "💫 Skill");
+    this.setNewName(profile, "Armors", "🛡️ Armors");
+
+
+    profile.addField(`⚖️ ${currency} Drop`, code(this.drop), true);
+    profile.addField("🔱 xp Drop", code(this.xpDrop), true);
 
     return profile;
   }

@@ -126,6 +126,7 @@ export class Player extends PlayerRPG {
     this.setNewName(profile, "Crit Damage", "🔥 Crit Damage");
     this.setNewName(profile, "Pet", "🐉 Pet");
     this.setNewName(profile, "Weapons", "🔪 Weapons");
+    this.setNewName(profile, "Skill", "💫 Skill");
 
     const armorIndex = 8;
     const armor = profile.fields.at(armorIndex)!.value;
@@ -143,7 +144,7 @@ export class Player extends PlayerRPG {
     profile.addField("💜 Level", code(this.level), true);
     profile.addField("🔱 xp", `\`${this.xp}/${this.requiredXP()}\``, true);
 
-    profile.addField("🛡️ Armor", armor);
+    profile.addField("🛡️ Armors", armor);
 
     return profile;
   }
