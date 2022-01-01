@@ -178,7 +178,7 @@ export default class extends Command {
 
       const embed = new MessageEmbed()
         .setColor("RANDOM")
-        .setTitle("Inventory")
+        .setTitle(`${this.emoji} Inventory`)
         .setDescription(inventoryList + footer);
 
       msg.channel.send({ embeds: [embed] });
