@@ -171,8 +171,10 @@ export default class extends Command {
       );
 
       let footer = "\n---\n";
+      const prefix = this.commandManager.prefix;
 
       footer += `${DIAMOND}: equipped/active`;
+      footer += `\nTo select number 1 item, use command \`${prefix}${this.name} 1\``;
 
       const embed = new MessageEmbed()
         .setColor("RANDOM")
